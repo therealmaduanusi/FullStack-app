@@ -13,7 +13,7 @@ route.post("/", async (req, res) => {
 
 route.get("/:PostId", async (req, res) => {
   const postId = req.params.PostId;
-  const comments = await Comments.findAll({ where: { PostId: postId}});
+  const comments = await Comments.findAll({ where: { PostId: postId}}); // find where the PostId in the table === to the postId
   res.json(comments);
 });
 
