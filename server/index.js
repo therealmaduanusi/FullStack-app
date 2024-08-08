@@ -9,9 +9,9 @@ const db = require("./models");
 // console.log(db.Sequelize);
 
 const homeRoute = require("./routes/Post");
-// const aboutRoute = require("./routes/About"); 
+const commentsRoute = require("./routes/Comments"); 
 app.use("/post", homeRoute);
-// app.use("/about", aboutRoute);
+app.use("/comments", commentsRoute);
 
 
 
